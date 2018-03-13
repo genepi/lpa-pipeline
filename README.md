@@ -26,7 +26,7 @@ Open your web browser and enter http://localhost:8082. Use `admin` and `admin197
 
 3b) Run on the command line
 ```
-./cloudgene run seppinho-lpa-workflow --input <bam-folder> --inType bam --output <results-folder>
+./cloudgene run seppinho-lpa-workflow --input <bam-folder> --archive <fasta file>
 ```
 
 
