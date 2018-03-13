@@ -1,0 +1,99 @@
+name: LPA Mutation Server
+description: Mutation Server is able to detect both variants in genomic CNV regions and heteroplasmies in mitochondrial DNA. Users can specify BAM and CRAM files as an input and receive annotated variant files in return.
+version: 1.0
+
+workflow:
+
+  steps:
+
+    - name: Detect Variants
+      type: java
+      jar: mutation-server-1.1.0.jar
+      params: analyse-local --input $input --reference $archive --level $level --outputRaw ${raw}.txt --outputVar ${variants}.txt --baq $baq --indel $indel --baseQ $baseQuality --mapQ $mapQuality --alignQ $alignQuality
+
+    - name: Annotate File
+      type: java
+      jar: genepi-annotate-0.1.0.jar
+      params: annotate --input ${variants}.txt --reference $archive --position Pos --mutation Variant --maplocus maplocus_v3.txt --output ${variantsAnnotate}.txt --columnwt wt aas --columnmut mut aas
+      
+  inputs:
+
+    - id: input
+      description: Input Files (BAM)
+      type: local-folder
+
+    - id: archive
+      description: Reference FASTA
+      type: local-file
+      visible: true
+      
+    - id: level
+      description: Detection Level in %
+      type: number
+      value: 0.01
+      visible: true
+
+    - id: mapQuality
+      description: Min. Mapping quality
+      type: number
+      value: 20
+      visible: false
+
+    - id: alignQuality
+      description: Min Alignment quality
+      visible: false
+      type: number
+      value: 30     
+      
+    - id: baseQuality
+      description: Min. Base quality
+      type: number
+      value: 20
+      visible: false
+
+    - id: baq
+      description: Calculate BAQ
+      type: checkbox
+      visible: true
+      values:
+        true: true
+        false: false
+      value: false
+
+    - id: indel
+      description: Indel calling
+      type: checkbox
+      visible: true
+      values:
+        true: true
+        false: false
+      value: false
+                 
+    - id: submissionSource
+      description: submission source
+      type: text
+      value: web
+      visible: false
+
+  outputs:
+
+    - id: raw
+      description: Raw file
+      type: local-file
+      removeHeader: false
+      download: true
+      temp: false
+      
+    - id: variants
+      description: Variants file
+      type: local-file
+      removeHeader: false
+      download: false
+      temp: false
+
+    - id: variantsAnnotate
+      description: Annotated Variants file 
+      type: local-file
+      removeHeader: false
+      download: true
+      temp: false
