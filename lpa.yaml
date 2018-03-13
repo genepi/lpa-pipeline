@@ -54,7 +54,7 @@ workflow:
     - id: baq
       description: Calculate BAQ
       type: checkbox
-      visible: true
+      visible: false
       values:
         true: true
         false: false
