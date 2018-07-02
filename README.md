@@ -1,6 +1,11 @@
-# LPA Pipeline - Detection of low-level variants
+# LPA Server Pipeline 
 
-This repository includes the pipeline for detection of low-level variants.
+## General
+This repository includes the pipeline used for the submitted article "used in paper "Chasing variants in the LPA KIV-2 repeat: An evaluated sequencing protocol, a free analysis pipeline and a first map in human samples"". 
+
+You can upload a BAM file and get annotated variants in return. In this version. indel detection and baq are disabled.
+
+Please check [this repository](https://github.com/seppinho/mutation-server/releases) if you want to have a look at the actual source code. 
 
 ## Run the LPA Pipeline
 
@@ -15,7 +20,7 @@ curl -s install.cloudgene.io | bash
 2) Install the LPA workflow
 
 ```
-./cloudgene gh seppinho/lpa-workflow@latest
+./cloudgene gh seppinho/lpa-workflow
 ```
 
 3a) Start the local web service and run
