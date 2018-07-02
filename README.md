@@ -32,7 +32,8 @@ Open your web browser and enter http://localhost:8082. Use `admin` and `admin197
 ```
 ./cloudgene run seppinho-lpa-workflow --input <bam-folder> --archive <fasta file>
 ```
-
+## Download 1000G Data
+The script to download data from 1000 Genomes can be found [here](https://github.com/genepi/lpa-pipeline/tree/master/scripts).
 
 ## Contact
 Plesae contact [Stefan Coassin](mailto:stefan.coassin@i-med.ac.at) and [Sebastian Schoenherr](mailto:sebastian.schoenherr@i-med.ac.at) in case of problems. 
