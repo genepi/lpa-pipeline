@@ -5,7 +5,7 @@ This repository includes the pipeline used for the submitted article "used in pa
 
 You can upload a BAM file and get annotated variants in return. In this version. indel detection and baq are disabled.
 
-Please check [this repository](https://github.com/seppinho/mutation-server/releases) if you want to have a look at the actual source code. 
+Please check [this repository](https://github.com/seppinho/mutation-server) if you want to have a look at the actual source code. 
 
 ## Run the LPA Pipeline
 
@@ -35,6 +35,5 @@ Open your web browser and enter http://localhost:8082. Use `admin` and `admin197
 ```
 
 
-## Test Data
-
-## Paper Data
+## Contact
+Plesae contact [Stefan Coassin](mailto:stefan.coassin@i-med.ac.at) and [Sebastian Schoenherr](mailto:sebastian.schoenherr@i-med.ac.at) in case of problems. 
