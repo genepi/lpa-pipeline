@@ -1,7 +1,7 @@
 
 # Download 1000G Region
 
-This script currently downloads the lpa region (6:161033785-161066618) of all final 1000 Genomes Phase 3 BAM files (n=2504) and converts it back to fastq to run it with Mutation Server (Link soon). 
+This script currently downloads the lpa region (6:161033785-161066618) of all final 1000 Genomes Phase 3 BAM files (n=2504) and converts it back to fastq to run it with LPAServer.
 
 ## Prerequisites
 * Install samtools https://github.com/samtools/samtools/releases/download/1.7/samtools-1.7.tar.bz2
