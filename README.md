@@ -1,8 +1,8 @@
 # LPA Server Pipeline 
 
-This repository includes the pipeline used for the submitted article **Chasing variants in the LPA KIV-2 repeat: An evaluated sequencing protocol, a free analysis pipeline and a first map in human samples**. 
+This repository includes the used pipeline for the submitted article **XXX**. 
 
-You can upload a **BAM file** and get **annotated low-level variants** in return. In the current version. indel detection and BAQ features are disabled.
+You can upload a **BAM file** and get **annotated low-level variants** in return. In the current version, indel detection and BAQ features are disabled.
 
 Please check [this repository](https://github.com/seppinho/mutation-server) if you want to have a look at the actual source code. 
 
