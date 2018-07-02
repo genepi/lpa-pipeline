@@ -1,6 +1,5 @@
 # LPA Server Pipeline 
 
-## General
 This repository includes the pipeline used for the submitted article **Chasing variants in the LPA KIV-2 repeat: An evaluated sequencing protocol, a free analysis pipeline and a first map in human samples**. 
 
 You can upload a **BAM file** and get **annotated low-level variants** in return. In the current version. indel detection and BAQ features are disabled.
