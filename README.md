@@ -1,8 +1,8 @@
-# LPA Mutation-Server - Detection of low-level variants
+# LPA Pipeline - Detection of low-level variants
 
-This repository includes the workflow for detection of low-level variants.
+This repository includes the pipeline for detection of low-level variants.
 
-## Run LPA Mutation-Server
+## Run the LPA Pipeline
 
 1) Install Cloudgene with the following commands
 
@@ -30,3 +30,6 @@ Open your web browser and enter http://localhost:8082. Use `admin` and `admin197
 ```
 
 
+## Test Data
+
+## Paper Data
