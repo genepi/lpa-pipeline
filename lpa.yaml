@@ -100,7 +100,7 @@ workflow:
       download: false
       temp: false
  
-     - id: variantsAnno
+    - id: variantsAnno
       description: Variants file Base Annotation
       type: local-file
       removeHeader: false
