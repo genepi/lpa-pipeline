@@ -37,7 +37,7 @@ Open your web browser and enter http://localhost:8082. Use `admin` and `admin197
 
 3b) Run on the command line
 ```
-./cloudgene run seppinho-lpa-workflow --input <bam-folder> --archive <fasta file>
+./cloudgene run seppinho-lpa-workflow --input <bam-folder> --archive <fasta file> --annotateBase <annotation file> --annotateRegion <region file>
 ```
 ## Test Data
 
@@ -45,8 +45,12 @@ Open your web browser and enter http://localhost:8082. Use `admin` and `admin197
 
 * Download [Reference](https://raw.githubusercontent.com/seppinho/mutation-server/76e865ece25cf792d1534b0288b2c28bc1b3d013/test-data/dna/lpa-sample/reference/kiv2_6.fasta)
 
+* Download [Base Anntation](https://raw.githubusercontent.com/genepi/lpa-pipeline/master/files/typeb_annotation.csv)
+
+* Download [Region Anntation](https://raw.githubusercontent.com/genepi/lpa-pipeline/master/files/maplocus_v3.txt)
+
 ```
-./cloudgene run seppinho-lpa-workflow --input <bam-folder-withAK-Sample> --archive kiv2_6.fasta
+./cloudgene run seppinho-lpa-workflow --input <bam-folder-withAK-Sample> --archive kiv2_6.fasta --annotateBase typeb_annotation.csv --annotateRegion maplocus_v3.txt
 ```
 
 ## Download 1000G Paper Data
