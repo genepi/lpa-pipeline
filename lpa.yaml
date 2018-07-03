@@ -14,11 +14,11 @@ workflow:
     - name: Base Annotation
       type: java
       jar: files/mutation-server-1.1.5.jar
-      params: base-annotate --input ${variants}.txt --output ${variantsAnno}.txt --annotation $annoBaseFile --key Position --value TypeB
+      params: base-annotate --input ${variants}.txt --output ${variantsAnno}.txt --annotation $annotateBase --key Position --value TypeB
     - name: Region Annotation
       type: java
       jar: files/genepi-annotate-0.1.0.jar
-      params: annotate --input ${variantsAnno}.txt --reference $archive --position Pos --mutation Variant --maplocus files/maplocus_v3.txt --output ${variantsAnnotate}.txt --columnwt wt aas --columnmut mut aas
+      params: annotate --input ${variantsAnno}.txt --reference $archive --position Pos --mutation Variant --maplocus $annotateRegion --output ${variantsAnnotate}.txt --columnwt wt aas --columnmut mut aas
 
     - name: Create Statistics
       type: java
@@ -36,10 +36,15 @@ workflow:
       type: local-file
       visible: true
 
-    - id: annoBaseFile
+    - id: annotateBase
       description: Base Annotation File
       type: local-file
       visible: true
+      
+    - id: annotateRegion
+      description: Base Annotation File
+      type: local-file
+      visible: true      
       
     - id: level
       description: Detection Level in %
