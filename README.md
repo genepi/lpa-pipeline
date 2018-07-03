@@ -6,6 +6,13 @@ You can upload a **BAM file** and get **annotated low-level variants** in return
 
 Please check [this repository](https://github.com/seppinho/mutation-server) if you want to have a look at the actual source code. 
 
+## Pipeline Steps
+
+* Low-level Variant Detection
+* Type-B Base Annotation
+* Region Annotation
+* Overall Statistics
+
 ## Run the LPA Pipeline
 
 1) Install Cloudgene with the following commands
