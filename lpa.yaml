@@ -15,7 +15,6 @@ workflow:
       type: java
       jar: files/mutation-server-1.1.5.jar
       params: base-annotate --input ${variants}.txt --output ${variantsAnno}.txt --annotation files/typeb_annotation.csv --key Position --value TypeB
-      
     - name: Region Annotation
       type: java
       jar: files/genepi-annotate-0.1.0.jar
