@@ -14,7 +14,7 @@ workflow:
     - name: Base Annotation
       type: java
       jar: files/mutation-server-1.1.5.jar
-      params: annotate-base --input ${variants}.txt --output ${variantsAnno}.txt --key Pos --vakue TypeB
+      params: base-annotate --input ${variants}.txt --output ${variantsAnno}.txt --annotation files/typeb_annotation.csv --key Position --value TypeB
       
     - name: Region Annotation
       type: java
