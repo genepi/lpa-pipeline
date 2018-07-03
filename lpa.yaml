@@ -11,10 +11,15 @@ workflow:
       jar: files/mutation-server-1.1.5.jar
       params: analyse-local --input $input --reference $archive --level $level --outputRaw ${raw}.txt --outputVar ${variants}.txt --baq $baq --indel $indel --baseQ $baseQuality --mapQ $mapQuality --alignQ $alignQuality
 
-    - name: Annotate File
+    - name: Base Annotation
+      type: java
+      jar: files/mutation-server-1.1.5.jar
+      params: annotate-base --input ${variants}.txt --output ${variantsAnno}.txt --key Pos --vakue TypeB
+      
+    - name: Region Annotation
       type: java
       jar: files/genepi-annotate-0.1.0.jar
-      params: annotate --input ${variants}.txt --reference $archive --position Pos --mutation Variant --maplocus files/maplocus_v3.txt --output ${variantsAnnotate}.txt --columnwt wt aas --columnmut mut aas
+      params: annotate --input ${variantsAnno}.txt --reference $archive --position Pos --mutation Variant --maplocus files/maplocus_v3.txt --output ${variantsAnnotate}.txt --columnwt wt aas --columnmut mut aas
 
     - name: Create Statistics
       type: java
@@ -95,7 +100,14 @@ workflow:
       removeHeader: false
       download: false
       temp: false
-     
+ 
+     - id: variantsAnno
+      description: Variants file Base Annotation
+      type: local-file
+      removeHeader: false
+      download: false
+      temp: false
+      
     - id: statistics
       description: Overall Statistics
       type: local-file
