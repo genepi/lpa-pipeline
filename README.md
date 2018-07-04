@@ -2,9 +2,18 @@
 
 This repository includes the used pipeline for the submitted article **XXX**. 
 
-You can upload a **BAM file** and get **annotated low-level variants** in return. In the current version, indel detection and BAQ features are disabled.
+You can upload a **BAM file** and get **annotated low-level variants** in return. In the current version, indel detection and BAQ features are disabled. 
 
-Please check [this repository](https://github.com/seppinho/mutation-server) if you want to have a look at the actual source code. 
+## BAM file creation
+We recommend to use [BWA-MEM](https://github.com/lh3/bwa) to align your FASTQ files against a reference. Please use [this reference](https://raw.githubusercontent.com/seppinho/mutation-server/76e865ece25cf792d1534b0288b2c28bc1b3d013/test-data/dna/lpa-sample/reference/kiv2_6.fasta) for the alignment process.
+
+```
+bwa mem kiv2_6.fasta <file1.fastq> <file2.fastq>| gzip -3 > aln-pe.sam
+samtools view -S -b aln-pe.sam > sample.bam
+```
+
+## Source Code
+Please check out [this repository](https://github.com/seppinho/mutation-server) if you want to have a look at the actual source code. 
 
 ## Pipeline Steps
 
