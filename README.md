@@ -54,9 +54,9 @@ Open your web browser and enter http://localhost:8082. Use `admin` and `admin197
 
 * Download [Reference](https://raw.githubusercontent.com/seppinho/mutation-server/76e865ece25cf792d1534b0288b2c28bc1b3d013/test-data/dna/lpa-sample/reference/kiv2_6.fasta)
 
-* Download [Base Anntation](https://raw.githubusercontent.com/genepi/lpa-pipeline/master/files/typeb_annotation.csv)
+* Download [Base Annotation](https://raw.githubusercontent.com/genepi/lpa-pipeline/master/files/typeb_annotation.csv)
 
-* Download [Region Anntation](https://raw.githubusercontent.com/genepi/lpa-pipeline/master/files/maplocus_v3.txt)
+* Download [Region Annotation](https://raw.githubusercontent.com/genepi/lpa-pipeline/master/files/maplocus_v3.txt)
 
 ```
 ./cloudgene run seppinho-lpa-workflow --input <bam-folder-withAK-Sample> --archive kiv2_6.fasta --annotateBase typeb_annotation.csv --annotateRegion maplocus_v3.txt
@@ -66,4 +66,4 @@ Open your web browser and enter http://localhost:8082. Use `admin` and `admin197
 The script to download data from 1000 Genomes can be found [here](https://github.com/genepi/lpa-pipeline/tree/master/scripts).
 
 ## Contact
-Plesae contact [Stefan Coassin](mailto:stefan.coassin@i-med.ac.at) and [Sebastian Schoenherr](mailto:sebastian.schoenherr@i-med.ac.at) in case of problems. 
+Please contact [Stefan Coassin](mailto:stefan.coassin@i-med.ac.at) and [Sebastian Schoenherr](mailto:sebastian.schoenherr@i-med.ac.at) in case of problems. 
