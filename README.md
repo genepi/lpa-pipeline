@@ -1,6 +1,7 @@
 # LPA Server Pipeline 
 
-This repository includes the used pipeline for the submitted article **XXX**. 
+This repository includes the used pipeline for the article **A comprehensive map of single base
+polymorphisms in the hypervariable LPA Kringle-IV-2 copy number variation region**. The paper can be found [here](http://www.jlr.org/content/early/2018/11/09/jlr.M090381.full.pdf+html).
 
 You can upload a **BAM file** and get **annotated low-level variants** in return. In the current version, indel detection and BAQ features are disabled. 
 
@@ -11,7 +12,8 @@ We recommend to use [BWA-MEM](https://github.com/lh3/bwa) to align your FASTQ fi
 bwa mem kiv2_6.fasta <file1.fastq> <file2.fastq>| gzip -3 > aln-pe.sam
 samtools view -S -b aln-pe.sam > sample.bam
 ```
-
+## Data
+All sequence data has been upload to Dataverse and can be accesed [here]().
 ## Source Code
 Please check out [this repository](https://github.com/seppinho/mutation-server) if you want to have a look at the actual source code. 
 
