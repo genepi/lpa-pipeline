@@ -13,7 +13,7 @@ bwa mem kiv2_6.fasta <file1.fastq> <file2.fastq>| gzip -3 > aln-pe.sam
 samtools view -S -b aln-pe.sam > sample.bam
 ```
 ## Data
-All sequence data has been upload to Dataverse and can be accesed [here]().
+All sequence data has been upload to Dataverse and can be accesed [here](https://dataverse.harvard.edu/privateurl.xhtml?token=97c2d60e-eca8-4908-aa23-a37c57c877e4).
 ## Source Code
 Please check out [this repository](https://github.com/seppinho/mutation-server) if you want to have a look at the actual source code. 
 
